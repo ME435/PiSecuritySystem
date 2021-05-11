@@ -67,3 +67,4 @@ if __name__ == '__main__':
                 if elapsed_security_photo_time > settings_page_manager.time_threshold:
                     print(f"The Security System criteria have been met.  Taking a picture!")
                     pi_tank.take_photo()
+                    last_security_photo_time = time.time()
