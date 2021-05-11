@@ -14,7 +14,7 @@ class PiTank():
         self.settings_page_manager = settings_page_manager
         self.robot = rosebot.RoseBot()
 
-        # Camera setup (CONSIDER: Make this part of the RoseBot class)
+        # TODO: Camera setup
         
         self.settings_page_manager.add_command_listener(self.handle_command)
         self.settings_page_manager.add_feedback_stream_listener()  # Interestingly no callback is needed
@@ -37,6 +37,7 @@ class PiTank():
 if __name__ == '__main__':
     print("Ready")
     # Initialize Firebase
+    # TODO: Put in your project id.
     my_project_id = "your_project_id"
     # cred = firebase_admin.credentials.Certificate('serviceAccountKey.json')  # Works fine, but has a dependency on where the file is run from.
     cred = credentials.Certificate(f'{file_utils.get_directory()}/serviceAccountKey.json')
